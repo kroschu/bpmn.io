@@ -11,3 +11,4 @@ RUN npm install . && \
     npm run all
 
 WORKDIR /npm-build/dist/
+CMD [ "npm", "start", "--", "--host=0.0.0.0", "--port=9000" ]
