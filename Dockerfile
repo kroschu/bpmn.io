@@ -6,3 +6,4 @@ RUN npm install . && \
 
 FROM nginx:1.15.2-alpine
 COPY --from=builder /npm-build/dist/ /usr/share/nginx/html/
+EXPOSE 9000
