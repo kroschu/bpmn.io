@@ -4,6 +4,6 @@ COPY . /npm-build
 RUN npm install . && \
     npm run all
 
-FROM nginx:1.15.2-alpine
-COPY --from=builder /npm-build/dist/ /usr/share/nginx/html/
-EXPOSE 9000
+FROM lsioarmhf/nginx-armhf
+COPY --from=builder /npm-build/dist/ /config/www/
+EXPOSE 9000 80
