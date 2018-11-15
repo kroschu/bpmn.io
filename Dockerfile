@@ -1,4 +1,4 @@
-FROM node:8.11.3-alpine as builder
+FROM resin/raspberrypi3-alpine-node:8.11.4 as builder
 WORKDIR /npm-build
 COPY . /npm-build
 RUN npm install . && \
