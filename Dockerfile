@@ -10,5 +10,6 @@ FROM base as process_engine
 RUN npm install . && \
     npm run all
 
-WORKDIR /npm-build/dist/
-CMD [ "npm", "start", "--", "--host=0.0.0.0", "--port=9000" ]
+WORKDIR /npm-build
+CMD [ "npm", "run dev", "--", "--host=0.0.0.0", "--port=9000" ]
+EXPOSE 9000
